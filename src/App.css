@@ -4,6 +4,12 @@
     object-position: top left;
 }
 
+@media only screen and (max-width: 992px) {
+  .newsitembody{
+    display: flex;
+    justify-content: center;
+  }
+}
 @media only screen and (max-width: 767px) {
   .newsitembody{
     display: flex;
