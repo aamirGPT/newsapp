@@ -3,3 +3,16 @@
     object-fit: cover;
     object-position: top left;
 }
+
+@media only screen and (max-width: 767px) {
+  .newsitembody{
+    display: flex;
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 767px) and (orientation: landscape) {
+  .newsitembody{
+    display: flex;
+    justify-content: left;
+  }
+}
