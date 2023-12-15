@@ -102,6 +102,8 @@ export default class News extends Component {
                                                 : placeholder
                                         }
                                         newsURL={element.url}
+                                        author={element.author? element.author : "Unknown"}
+                                        date={element.publishedAt}
                                     />
                                 </div>
                             );
