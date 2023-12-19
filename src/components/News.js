@@ -45,7 +45,6 @@ export default class News extends Component {
         this.props.setProgress(100);
     }
     async componentDidMount() {
-        // Lifecycle Method It runs after render method is called.
         this.updateNews();
     }
     handlePrevClick = async () => {
@@ -82,7 +81,6 @@ export default class News extends Component {
                         this.props.category.slice(1)}{" "}
                     Headlines
                 </h1>
-                {/* {this.state.loading && <Spinner />} */}
                 <InfiniteScroll
                     dataLength={this.state.articles.length}
                     next={this.fetchMoreData}
@@ -93,7 +91,6 @@ export default class News extends Component {
                 >
                     <div className="container">
                         <div className="row">
-                            {/* {!this.state.loading && */}
                             {this.state.articles.map((element, index) => {
                                 return (
                                     <div
