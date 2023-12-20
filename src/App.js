@@ -2,7 +2,7 @@ import "./App.css";
 import NavBar from "./components/NavBar";
 import News from "./components/News";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import About from "./components/About";
 import LoadingBar from "react-top-loading-bar";
 
@@ -10,6 +10,13 @@ const App = () => {
     const pageSize = 6;
     const apiKey = process.env.REACT_APP_NEWS_API_KEY;
     const [progress, setProgress] = useState(0);
+
+    useEffect(() => {
+        alert(
+            `This App's API will ONLY work on a localhost and I have used dummy static data as backup  for vercel, netlify, etc. hosting websites.
+            Thus, it will not categories the news`
+        );
+    }, []);
 
     return (
         <div className="App">
