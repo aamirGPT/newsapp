@@ -292,13 +292,15 @@ const News = (props) => {
         props.setProgress(50);
         let parsedData = await data.json();
         props.setProgress(75);
-        if (parsedData.code === 'rateLimited') {
+        if (
+            parsedData.code === "rateLimited" ||
+            parsedData.code === "corsNotAllowed"
+        ) {
             setArticles(demoData.articles);
             setTotalResults(demoData.totalResults);
             setLoading(false);
             props.setProgress(100);
-        }
-        else {
+        } else {
             setArticles(parsedData.articles);
             setTotalResults(parsedData.totalResults);
             setLoading(false);
@@ -321,7 +323,7 @@ const News = (props) => {
         setLoading(true);
         let data = await fetch(url);
         let parsedData = await data.json();
-        if (parsedData.code === "rateLimited") {
+        if (parsedData.code === "rateLimited" || parsedData.code === "corsNotAllowed") {
             setArticles(articles.concat(demoData.articles));
             setTotalResults(demoData.totalResults);
             setLoading(false);
