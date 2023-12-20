@@ -11,16 +11,18 @@ const About = () => {
                         A react app to display news fetched from NewsAPI
                     </h6>
                     <p className="card-text">
-                        This project includes: <br />1) Responsive Design using
-                        Bootstrap 5. <br />2) NPM's top loading bar. <br />3) NPM's infinite
-                        scroll. <br />4) NewsAPI to fetch data. be
-                        <br />5) if the API get's
-                        exhausted, a set of demo data is provided for the app to
-                        be demonstrated. <br />6) The NewsAPI is not available outside
-                        a localhost.
+                        This project includes: <br />
+                        1) Responsive Design using Bootstrap 5. <br />
+                        2) NPM's top loading bar. <br />
+                        3) NPM's infinite scroll. <br />
+                        4) NewsAPI to fetch data. be
+                        <br />
+                        5) if the API get's exhausted, a set of demo data is
+                        provided for the app to be demonstrated. <br />
+                        6) The NewsAPI is not available outside a localhost.
                     </p>
                     <Link
-                        to="https://master--newsmonkey-aamir-react.netlify.app/"
+                        to="https://newsmonkey-newsapp-react.netlify.app/"
                         className="card-link"
                         target="_blank"
                     >
